@@ -9,7 +9,9 @@ class EmailParser
 
   def parse
     emails = @raw_emails.split(" ")
-    emails.slice(",")
+    emails.each do |email|
+      email.slice!(",")
+    end
     emails
   end
 end
