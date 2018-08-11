@@ -8,10 +8,8 @@ class EmailParser
   end
 
   def parse
-    emails = @raw_emails.split(", ")
-    if emails.length == 1
-      emails = @raw_emails.split(" ")
-    end
+    emails = @raw_emails.split(" ")
+    emails.slice(",")
     emails
   end
 end
